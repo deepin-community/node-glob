@@ -1,0 +1,227 @@
+node-glob (7.1.7+~cs7.5.19-2) unstable; urgency=medium
+
+  * Team upload.
+  * Declare compliance with policy 4.6.0
+  * Don't launch test when arch is i386
+
+ -- Yadd <yadd@debian.org>  Sat, 04 Sep 2021 08:40:14 +0200
+
+node-glob (7.1.7+~cs7.5.19-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Debian Janitor ]
+  * Remove constraints unnecessary since stretch:
+    + Build-Depends: Drop versioned constraint on node-once, node-tap.
+    + node-glob: Drop versioned constraint on node-once in Depends.
+
+  [ Yadd ]
+  * Declare compliance with policy 4.5.1
+  * Add ctype=nodejs to component(s)
+  * Fix GitHub tags regex
+
+  [ Pirate Praveen ]
+  * Add components: tiny-glob, globalizer, globrex
+  * New upstream version 7.1.7+~cs7.5.19
+  * Refresh patches
+
+ -- Pirate Praveen <praveen@debian.org>  Sat, 14 Aug 2021 02:22:55 +0530
+
+node-glob (7.1.6+~7.1.3-1) unstable; urgency=medium
+
+  * Team upload
+  * Embed @types/glob and repack
+  * Add a break against node-typescript-types < 20201105-1~
+
+ -- Xavier Guimard <yadd@debian.org>  Thu, 05 Nov 2020 11:08:51 +0100
+
+node-glob (7.1.6-3) unstable; urgency=medium
+
+  * Team upload
+  * Back to unstable after successful tests
+
+ -- Xavier Guimard <yadd@debian.org>  Sat, 24 Oct 2020 19:54:23 +0200
+
+node-glob (7.1.6-2) experimental; urgency=medium
+
+  * Team upload
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Submit.
+  * Remove obsolete fields Contact, Name from debian/upstream/metadata
+    (already present in machine-readable debian/copyright).
+  * Update standards version to 4.5.0, no changes needed.
+
+  [ Xavier Guimard ]
+  * Bump debhelper compatibility level to 13
+  * Use dh-sequence-nodejs
+  * Add fix for node-mkdirp ≥ 1
+
+ -- Xavier Guimard <yadd@debian.org>  Fri, 23 Oct 2020 11:28:46 +0200
+
+node-glob (7.1.6-1) unstable; urgency=medium
+
+  * Team upload
+  * Bump debhelper compatibility level to 12
+  * Declare compliance with policy 4.4.1
+  * Add "Rules-Requires-Root: no"
+  * Add debian/gbp.conf
+  * Switch test and install to pkg-js-tools
+  * New upstream version 7.1.6
+  * Install upstream logo
+  * Update debian/copyright
+
+ -- Xavier Guimard <yadd@debian.org>  Wed, 04 Dec 2019 20:57:35 +0100
+
+node-glob (7.1.3-2) unstable; urgency=medium
+
+  * Team upload
+  * Add upstream/metadata
+  * Increase test timeout
+  * Disable test/bash-comparison.js in autopkgtest. Fixes debci
+  * Update www.gnu.org link to https
+  * Declare compliance with policy 4.3.0
+  * Remove useless build-dependency versions
+
+ -- Xavier Guimard <yadd@debian.org>  Mon, 21 Jan 2019 21:44:07 +0100
+
+node-glob (7.1.3-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version 7.1.3
+  * Remove dh-buildinfo build dependency
+  * Make dependencies backports friendly
+  * Bump Standards-Version to 4.2.1 (no changes needed)
+
+ -- Pirate Praveen <praveen@debian.org>  Sun, 16 Sep 2018 14:39:11 +0530
+
+node-glob (7.1.2-6) unstable; urgency=medium
+
+  * Team upload
+  * Bump policy and compat (no changes)
+  * Move to salsa
+  * Move to section javascript
+
+ -- Bastien Roucariès <rouca@debian.org>  Tue, 22 May 2018 16:58:19 +0200
+
+node-glob (7.1.2-5) unstable; urgency=medium
+
+  * Team upload
+  * Bug fix: "Package built in nocheck build profile is broken", thanks to
+    Daniel Schepler (Closes: #893322).
+
+ -- Bastien Roucariès <rouca@debian.org>  Mon, 19 Mar 2018 09:19:51 +0100
+
+node-glob (7.1.2-4) unstable; urgency=medium
+
+  * Team upload
+  * Fix require testsuite
+
+ -- Bastien Roucariès <rouca@debian.org>  Sun, 20 Aug 2017 15:57:20 +0200
+
+node-glob (7.1.2-3) unstable; urgency=medium
+
+  * Team upload
+  * Supply TEST_REGEN=1 environment variable to fix autopkg test
+
+ -- Bastien Roucariès <rouca@debian.org>  Sat, 19 Aug 2017 23:22:46 +0200
+
+node-glob (7.1.2-2) unstable; urgency=medium
+
+  * Team upload
+  * Fix autopkg test suite depends
+  * Fix nocheck and nodoc rules
+  * Bump compat
+  * Bump policy (no change)
+
+ -- Bastien Roucariès <rouca@debian.org>  Fri, 18 Aug 2017 20:46:20 +0200
+
+node-glob (7.1.2-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version, needed for tape
+  * Fix example, run testsuite
+  * Improve depends rules
+  * Use system installed package for running autopkg testsuite
+
+ -- Bastien Roucariès <rouca@debian.org>  Sun, 13 Aug 2017 23:25:14 +0200
+
+node-glob (7.1.1-1) unstable; urgency=medium
+
+  * New upstream version 7.1.1 (Closes: #843957)
+  * debhelper 9
+  * Standards-Version 3.9.8
+  * Secure Vcs Url
+  * Depends: node-fs.realpath, node-inflight, node-path-is-absolute
+  * autopkgtest
+
+ -- Jérémy Lal <kapouer@melix.org>  Sun, 13 Nov 2016 23:28:08 +0100
+
+node-glob (4.0.5-1) unstable; urgency=medium
+
+  * Imported Upstream version 4.0.5
+  * Standards-Version: 3.9.5
+  * Move to pkg-javascript
+  * Depends node-once
+  * License change to ISC
+
+ -- Jérémy Lal <kapouer@melix.org>  Tue, 29 Jul 2014 02:10:41 +0200
+
+node-glob (3.2.6-1) unstable; urgency=low
+
+  * Upstream update
+  * control:
+    + Standards-Version 3.9.4
+    + Canonicalize Vcs fields
+    + remove dependency on node-graceful-fs
+    + bump dependency on node-inherits >= 2
+  * copyright: add Source and Upstream-Contact fields.
+
+ -- Jérémy Lal <kapouer@melix.org>  Wed, 21 Aug 2013 09:04:14 +0200
+
+node-glob (3.2.1-2) unstable; urgency=low
+
+  * Update package description. (Closes: #702203)
+
+ -- Jérémy Lal <kapouer@melix.org>  Sat, 27 Apr 2013 16:15:51 +0200
+
+node-glob (3.2.1-1) unstable; urgency=low
+
+  * Upstream update.
+  * Add examples using dh_installexamples.
+  * Add myself to uploaders.
+  * Tighten dependencies on node-minimatch (>= 0.2.11) and
+    node-graceful-fs (>= 1.2.0).
+  * Copyright:
+    + clean BSD-2-clause license text,
+    + bump year to 2013, removed unneeded symbols,
+    + set Upstream-Name (glob)
+    + add trailing slash to Format url.
+
+ -- Jérémy Lal <kapouer@melix.org>  Sat, 27 Apr 2013 16:12:34 +0200
+
+node-glob (3.1.9-1) unstable; urgency=low
+
+  * New upstream version
+
+ -- David Paleino <dapal@debian.org>  Thu, 22 Mar 2012 21:43:41 +0100
+
+node-glob (3.1.7-1) unstable; urgency=low
+
+  [ Jérémy Lal ]
+  * Standards-Version 3.9.3
+  * Architecture 'all' because node-glob is now native JavaScript.
+  * Depends on node-minimatch, node-inherits, node-graceful-fs.
+
+  [ David Paleino ]
+  * New upstream version
+    - the package is now no more compiled (Closes: #664913)
+  * Updated debian/copyright
+
+ -- David Paleino <dapal@debian.org>  Thu, 22 Mar 2012 00:04:59 +0100
+
+node-glob (2.0.9-1) unstable; urgency=low
+
+  * Initial release
+
+ -- David Paleino <dapal@debian.org>  Sat, 29 Oct 2011 01:51:50 +0200

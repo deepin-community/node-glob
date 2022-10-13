@@ -1,0 +1,42 @@
+Source: node-glob
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: David Paleino <dapal@debian.org>, Jérémy Lal <kapouer@melix.org>
+Section: javascript
+Priority: optional
+Build-Depends: debhelper-compat (= 13)
+ , dh-sequence-nodejs
+ , node-fs.realpath <!nocheck>
+ , node-inflight <!nocheck>
+ , node-inherits <!nocheck>
+ , node-minimatch (>= 3.0.4~) <!nocheck>
+ , node-mkdirp (>= 1) <!nocheck>
+ , node-once <!nocheck>
+ , node-path-is-absolute <!nocheck>
+ , node-rimraf <!nocheck>
+ , node-tap <!nocheck>
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/js-team/node-glob
+Vcs-Git: https://salsa.debian.org/js-team/node-glob.git
+Homepage: https://github.com/isaacs/node-glob
+Rules-Requires-Root: no
+
+Package: node-glob
+Architecture: all
+Depends: ${misc:Depends}
+ , node-fs.realpath
+ , node-inflight
+ , node-inherits
+ , node-minimatch (>= 3.0.4~)
+ , node-once
+ , node-path-is-absolute
+ , nodejs
+Provides: ${nodejs:Provides}
+Breaks: node-typescript-types (<< 20201105-1~)
+Description: glob functionality for Node.js
+ node-glob is a glob implementation for Node.js
+ .
+ It features brace expansion, extended glob matching, globstar matching,
+ and can be invoked synchronously as well as asynchronously.
+ It uses minimatch for pattern matching.
+ .
+ Node.js is an event-based server-side javascript engine.

@@ -1,0 +1,57 @@
+Description: fix for mkdirp ≥ 1
+Author: Xavier Guimard <yadd@debian.org>
+Forwarded: https://github.com/isaacs/node-glob/issues/428
+Last-Update: 2020-10-23
+
+--- a/test/00-setup.js
++++ b/test/00-setup.js
+@@ -41,15 +41,14 @@
+   tap.test(f, function (t) {
+     f = path.resolve(fixtureDir, f)
+     var d = path.dirname(f)
+-    mkdirp(d, '0755', function (er) {
+-      if (er) {
+-        t.fail(er)
+-        return t.bailout()
+-      }
++    mkdirp(d, '0755').then(() => {
+       fs.writeFile(f, "i like tests", function (er) {
+         t.error(er, "make file")
+         t.end()
+       })
++    }).catch((er) => {
++      t.fail(er)
++      return t.bailout()
+     })
+   })
+ })
+@@ -57,11 +56,11 @@
+ if (process.platform !== "win32") {
+   tap.test("symlinky", function (t) {
+     var d = path.dirname(symlinkTo)
+-    mkdirp(d, '0755', function (er) {
+-      if (er)
+-        throw er
++    mkdirp(d, '0755').then(() => {
+       fs.symlinkSync(symlinkFrom, symlinkTo, "dir")
+       t.end()
++    }).catch((er) => {
++      throw er
+     })
+   })
+ }
+@@ -69,11 +68,11 @@
+ ;["foo","bar","baz","asdf","quux","qwer","rewq"].forEach(function (w) {
+   w = "/tmp/glob-test/" + w
+   tap.test("create " + w, function (t) {
+-    mkdirp(w, function (er) {
+-      if (er)
+-        throw er
++    mkdirp(w).then(() => {
+       t.pass(w)
+       t.end()
++    }).catch((er) => {
++      throw er
+     })
+   })
+ })
