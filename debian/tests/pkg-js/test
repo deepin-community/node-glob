@@ -1,1 +1,1 @@
-tap -T -R spec test/*.js
+tap --no-cov -T -R spec test/*.js

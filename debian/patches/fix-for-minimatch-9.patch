@@ -1,0 +1,46 @@
+Description: fix for minimatch 9
+Author: Yadd <yadd@debian.org>
+Forwarded: not-needed
+Last-Update: 2023-09-22
+
+--- a/test/bash-results.json
++++ b/test/bash-results.json
+@@ -3,12 +3,12 @@
+     "a/b/c/./d"
+   ],
+   "a/**/[cg]/../[cg]": [
+-    "a/abcdef/g/../g",
+-    "a/abcfed/g/../g",
+-    "a/b/c/../c",
+-    "a/c/../c",
+-    "a/c/d/c/../c",
+-    "a/symlink/a/b/c/../c"
++    "a/abcdef/g",
++    "a/abcfed/g",
++    "a/b/c",
++    "a/c",
++    "a/c/d/c",
++    "a/symlink/a/b/c"
+   ],
+   "a/{b,c,d,e,f}/**/g": [],
+   "a/b/**": [
+--- a/types-glob/index.d.ts
++++ b/types-glob/index.d.ts
+@@ -26,7 +26,7 @@
+     let Glob: IGlobStatic;
+     let GlobSync: IGlobSyncStatic;
+ 
+-    interface IOptions extends minimatch.IOptions {
++    interface IOptions extends minimatch.MinimatchOptions {
+         cwd?: string | undefined;
+         root?: string | undefined;
+         dot?: boolean | undefined;
+@@ -71,7 +71,7 @@
+     }
+ 
+     interface IGlobBase {
+-        minimatch: minimatch.IMinimatch;
++        minimatch: minimatch.Minimatch;
+         options: IOptions;
+         aborted: boolean;
+         cache: { [path: string]: boolean | 'DIR' | 'FILE' | ReadonlyArray<string> };

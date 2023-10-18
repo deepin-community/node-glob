@@ -8,12 +8,12 @@ Source: https://github.com/isaacs/node-glob
  https://github.com/terkelg/globrex/tags
 
 Files: *
-Copyright: Isaac Z. Schlueter and Contributors
+Copyright: 2009-2022 Isaac Z. Schlueter and Contributors
 License: ISC
 
 Files: debian/*
-Copyright: 2011-2012, David Paleino <dapal@debian.org>
- 2019, Yadd <yadd@debian.org>
+Copyright: 2011-2012 David Paleino <dapal@debian.org>
+ 2019-2022 Yadd <yadd@debian.org>
 License: GPL-2+
 
 Files: globalyzer/* globrex/*

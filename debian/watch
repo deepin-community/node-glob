@@ -1,5 +1,5 @@
 version=4
-opts=filenamemangle=s/.*\/v?([\d\.-]+)\.tar\.gz/node-glob-$1.tar.gz/ \
+opts=filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-glob-$1/ \
 https://github.com/isaacs/node-glob/tags .*/archive/.*/v?([\d\.]+).tar.gz group
 
 opts="searchmode=plain,ctype=nodejs,component=types-glob,pgpmode=none" \
@@ -9,19 +9,19 @@ opts=\
 component=tiny-glob,\
 ctype=nodejs,\
 dversionmangle=auto,\
-filenamemangle=s/.*\/v?([\d\.-]+)\.tar\.gz/node-tiny-glob-$1.tar.gz/ \
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-tiny-glob-$1/ \
  https://github.com/terkelg/tiny-glob/tags .*/archive.*/v?([\d\.]+).tar.gz checksum
 
 opts=\
 component=globalyzer,\
 ctype=nodejs,\
 dversionmangle=auto,\
-filenamemangle=s/.*\/v?([\d\.-]+)\.tar\.gz/node-globalyzer-$1.tar.gz/ \
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-globalyzer-$1/ \
  https://github.com/terkelg/globalyzer/tags .*/archive.*/v?([\d\.]+).tar.gz checksum
 
 opts=\
 component=globrex,\
 ctype=nodejs,\
 dversionmangle=auto,\
-filenamemangle=s/.*\/v?([\d\.-]+)\.tar\.gz/node-globrex-$1.tar.gz/ \
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-globrex-$1/ \
  https://github.com/terkelg/globrex/tags .*/archive.*/v?([\d\.]+).tar.gz checksum
