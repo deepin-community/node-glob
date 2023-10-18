@@ -1,3 +1,78 @@
+node-glob (8.0.3+~cs8.4.15-4) unstable; urgency=medium
+
+  * Team upload
+  * Source-only upload
+
+ -- Yadd <yadd@debian.org>  Thu, 12 Oct 2023 14:29:42 +0400
+
+node-glob (8.0.3+~cs8.4.15-3) unstable; urgency=medium
+
+  * Team upload
+  * Back to unstable
+
+ -- Yadd <yadd@debian.org>  Mon, 25 Sep 2023 07:23:51 +0400
+
+node-glob (8.0.3+~cs8.4.15-2) experimental; urgency=medium
+
+  * Team upload
+  * Update standards version to 4.6.2, no changes needed.
+  * Add patch for node-minimatch >= 9
+
+ -- Yadd <yadd@debian.org>  Fri, 22 Sep 2023 11:21:30 +0400
+
+node-glob (8.0.3+~cs8.4.15-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version 8.0.3+~cs8.4.15 (updates @types/glob)
+
+ -- Yadd <yadd@debian.org>  Tue, 29 Nov 2022 13:20:29 +0100
+
+node-glob (8.0.3+~cs7.6.15-1) unstable; urgency=medium
+
+  * Team upload
+  * Declare compliance with policy 4.6.1
+  * New upstream version 8.0.3+~cs7.6.15
+  * Drop dependency to node-path-is-absolute
+
+ -- Yadd <yadd@debian.org>  Wed, 18 May 2022 09:37:07 +0200
+
+node-glob (8.0.1+~cs7.6.15-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version 8.0.1+~cs7.6.15 (no real changes)
+
+ -- Yadd <yadd@debian.org>  Thu, 05 May 2022 15:22:33 +0200
+
+node-glob (7.2.1+~cs7.6.15-2) unstable; urgency=medium
+
+  * Team upload
+  * Fix test for tap >= 15 (--no-cov)
+
+ -- Yadd <yadd@debian.org>  Mon, 28 Mar 2022 06:16:58 +0200
+
+node-glob (7.2.1+~cs7.6.15-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream version 7.2.1+~cs7.6.15
+
+ -- Yadd <yadd@debian.org>  Thu, 17 Feb 2022 11:07:04 +0100
+
+node-glob (7.2.0+~cs7.6.15-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Debian Janitor ]
+  * Remove constraints unnecessary since buster
+
+  [ Yadd ]
+  * Fix filenamemangle
+  * Drop dependency to nodejs
+  * New upstream version 7.2.0+~cs7.6.15
+  * Require node-minimatch >= 3.1.1~ (Closes: #1005521)
+  * Add node-memfs in test dependencies
+
+ -- Yadd <yadd@debian.org>  Sun, 13 Feb 2022 16:07:37 +0100
+
 node-glob (7.1.7+~cs7.5.19-2) unstable; urgency=medium
 
   * Team upload.

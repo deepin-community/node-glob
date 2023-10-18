@@ -8,13 +8,13 @@ Build-Depends: debhelper-compat (= 13)
  , node-fs.realpath <!nocheck>
  , node-inflight <!nocheck>
  , node-inherits <!nocheck>
- , node-minimatch (>= 3.0.4~) <!nocheck>
+ , node-minimatch (>= 9) <!nocheck>
+ , node-memfs <!nocheck>
  , node-mkdirp (>= 1) <!nocheck>
  , node-once <!nocheck>
- , node-path-is-absolute <!nocheck>
  , node-rimraf <!nocheck>
  , node-tap <!nocheck>
-Standards-Version: 4.6.0
+Standards-Version: 4.6.2
 Vcs-Browser: https://salsa.debian.org/js-team/node-glob
 Vcs-Git: https://salsa.debian.org/js-team/node-glob.git
 Homepage: https://github.com/isaacs/node-glob
@@ -26,10 +26,8 @@ Depends: ${misc:Depends}
  , node-fs.realpath
  , node-inflight
  , node-inherits
- , node-minimatch (>= 3.0.4~)
+ , node-minimatch (>= 9)
  , node-once
- , node-path-is-absolute
- , nodejs
 Provides: ${nodejs:Provides}
 Breaks: node-typescript-types (<< 20201105-1~)
 Description: glob functionality for Node.js
